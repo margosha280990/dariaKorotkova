@@ -11,20 +11,35 @@
       @removeSkill="removeSkill(skill.id)"
     )
     .add-skill
-      input(type="text" v-model="skillName")
-      button(
-        type="button"
+      .add-skill-row
+        app-input(
+          type="text"
+          placeholder="Название"
+          v-model="skillName"
+          :error="validation.hasError('skillName')"
+        )
+      .skill-error {{validation.firstError('skillName')}}
+      app-button(
+        title="Добавить"
         @click="addSkill(skillGroup)"
-      ) Добавить скилл
-      
+        :disabled="validation.hasError('skillName')"
+      )
 </template>
 <script>
 
 import { mapGetters } from 'vuex'
+import { Validator } from 'simple-vue-validator'
 
 export default {
+  mixins: [require('simple-vue-validator').mixin],
+  validators: {
+    skillName: function(value) {
+      return Validator.value(value).required('Название не может быть пустым');
+    }
+  },
   data: () => ({
-    skillName: ''
+    skillName: '',
+    toto: ""
   }),
   props: {
     skillGroup: String,
@@ -32,6 +47,7 @@ export default {
   },
   methods: {
     addSkill(skillGroup) {
+      this.$validate();
       this.$emit('addSkill', {
         id: Math.round(Math.random() * 1000000),
         name: this.skillName,
@@ -44,20 +60,19 @@ export default {
     },
     checkSkillType(skillGroup) {
       switch (skillGroup) {
-        case 'Frontend' : 
+        case 'Frontend':
           return 1
-        case 'Workflow' :
+        case 'Workflow':
           return 2
-        case 'Backend' : 
+        case 'Backend':
           return 3
       }
     }
   },
-  mounted(){
-    console.log('key', this.key);
-  },
   components: {
-    Skill: require('../skill')
+    Skill: require('../skill'),
+    AppInput: require('Input'),
+    AppButton: require('Button')
   }
 }
 </script>

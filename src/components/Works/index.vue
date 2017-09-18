@@ -7,13 +7,13 @@
         app-input(
           placeholder="Название проекта"
           type="text"
-          v-model="title"
+          v-model="fields.title"
         )
       .row
         app-input(
           placeholder="Технологии"
           type="text"
-          v-model="tech"
+          v-model="fields.tech"
         )
       .row
         label.upload

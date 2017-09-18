@@ -1,14 +1,19 @@
 <template lang="pug">
-   input.input-field(
-      :type="type"
-      :placeholder="placeholder"
-      @input="changeVal($event.target.value)"
-    )
+  input.input-field(
+    :type="type"
+    :placeholder="placeholder"
+    :data-error="error"
+    @input="changeVal($event.target.value)"
+  )
 </template>
 <script>
 export default {
   props: {
     value: String,
+    error: {
+      type: Boolean,
+      default: false
+    },
     placeholder: {
       type: String,
       default: ""
@@ -20,7 +25,6 @@ export default {
   },
   methods: {
     changeVal(value) {
-      console.log('emit', value);
       this.$emit('input', value)
     }
   }

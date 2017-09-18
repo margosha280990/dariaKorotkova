@@ -9,4 +9,9 @@ button {
   &:hover {
     background-color: darken(#00bfa5, 10%);
   }
+
+  &[disabled] {
+    cursor: default;
+    background: #ccc;
+  }
 }

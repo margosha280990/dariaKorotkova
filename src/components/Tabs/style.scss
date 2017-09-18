@@ -5,6 +5,7 @@
 
 .tabs-item {
   border-right: 2px solid #fff;
+  cursor: pointer;
 
   &.active {
     .tabs-link {

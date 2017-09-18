@@ -5,4 +5,8 @@
   padding: 7px;
   border: 0 none;
   margin-right: 10px;
+
+  &[data-error] {
+    border: 1px solid red;
+  }
 }

@@ -1,3 +1,7 @@
+.add-skill-row {
+  margin-bottom: 10px;
+}
+
 .skills-item {
   width: 50%;
   padding-right: 90px;
@@ -6,4 +10,10 @@
 
 .skills-title {
   margin-bottom: 20px;
+}
+
+.skill-error {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: firebrick;
 }
