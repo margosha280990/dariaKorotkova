@@ -47,12 +47,15 @@ export default {
   },
   methods: {
     addSkill(skillGroup) {
-      this.$validate();
-      this.$emit('addSkill', {
-        id: Math.round(Math.random() * 1000000),
-        name: this.skillName,
-        percents: 0,
-        type: this.checkSkillType(skillGroup),
+      this.$validate().then(success => {
+        if (!success) return
+        
+        this.$emit('addSkill', {
+          id: Math.round(Math.random() * 1000000),
+          name: this.skillName,
+          percents: 0,
+          type: this.checkSkillType(skillGroup),
+        })
       })
     },
     removeSkill(skillId) {
