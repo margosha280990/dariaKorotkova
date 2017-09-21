@@ -57,8 +57,8 @@ export default {
 
   },
   components: {
-    AppButton: require('Button'),
-    AppInput: require('Input')
+    AppButton: require('_common/Button'),
+    AppInput: require('_common/Input')
   }
 }
 </script>

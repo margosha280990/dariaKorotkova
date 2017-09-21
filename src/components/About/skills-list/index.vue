@@ -33,9 +33,9 @@ import { Validator } from 'simple-vue-validator'
 export default {
   mixins: [require('simple-vue-validator').mixin],
   validators: {
-    skillName: function(value) {
-      return Validator.value(value).required('Название не может быть пустым');
-    }
+    skillName: (value) => (
+      Validator.value(value).required('Название не может быть пустым')  
+    ) 
   },
   data: () => ({
     skillName: '',
@@ -74,8 +74,8 @@ export default {
   },
   components: {
     Skill: require('../skill'),
-    AppInput: require('Input'),
-    AppButton: require('Button')
+    AppInput: require('_common/Input'),
+    AppButton: require('_common/Button')
   }
 }
 </script>

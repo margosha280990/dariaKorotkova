@@ -17,20 +17,69 @@
         )
       .row
         label.upload
-          input(type="file").type-file
+          input.type-file(
+            type="file"
+            @change="getFile($event)"
+          )
           .upload__icon
           .upload__text Загрузить картинку
+        div.error-message {{validation.firstError('fields.file')}}
+      .row
+        app-button(
+          title="Добавить"
+          :disabled="!fields.file || validation.hasError('fields.file')"
+          @click="sendData"
+        )
 </template>
 <script>
+import { Validator } from 'simple-vue-validator'
+import { mapActions } from 'vuex'
+
 export default {
+  mixins: [require('simple-vue-validator').mixin],
+  validators: {
+    'fields.file': (value) => {
+      return Validator.custom(() => {
+        if (Validator.isEmpty(value)) return
+
+        let allowedTypes = ['application/pdf', 'application/zip']
+
+        if (!_.includes(allowedTypes, value.type)) {
+          return 'Недопустимый формат файла, разрешены только .zip и .pdf'
+        }
+      });
+    }
+  },
   data: () => ({
     fields: {
       title: "",
-      tech: ""
+      tech: "",
+      file: null
     }
   }),
+  methods: {
+    ...mapActions('works', ['addNewWork']),
+    getFile(event) {
+      let file = event.target.files[0]
+      this.fields.file = file;
+    },
+    sendData() {
+      this.$validate().then(success => {
+        if (!success) return
+
+        let formData = new FormData();
+
+        formData.append('file', this.fields.file)
+        formData.append('tech', this.fields.tech)
+        formData.append('title', this.fields.title)
+
+        this.addNewWork(formData);
+      })
+    }
+  },
   components: {
-    AppInput: require('Input')
+    AppInput: require('_common/Input'),
+    AppButton: require('_common/Button')
   }
 }
 </script>
