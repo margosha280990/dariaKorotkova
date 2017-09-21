@@ -14,11 +14,11 @@
 
 <script>
 
-import { mapActions, mapGetters, mapMutations } from 'vuex';
+import { mapActions, mapGetters, mapMutations } from 'vuex'
 
 export default {
   data: () => ({
-    skillsTypes : ['Frontend', 'Workflow', 'Backend']
+    skillsTypes: ['Frontend', 'Workflow', 'Backend']
   }),
   methods: {
     ...mapActions('skills', ['fetchSkills']),
@@ -31,7 +31,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('skills', ['skills']),
+    ...mapGetters('skills', ['skills'])
   },
   mounted() {
     this.fetchSkills()

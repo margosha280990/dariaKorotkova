@@ -27,16 +27,16 @@ module.exports = {
                     './src/variables.scss',
                     './src/mixins.scss'
                   ]
-                },
-              },
+                }
+              }
             ]
           }
         }
-      }]
+      }, 'eslint-loader']
     },
     {
       test: /\.js$/,
-      loader: 'babel-loader',
+      use: ['babel-loader', 'eslint-loader'],
       exclude: /node_modules/
     },
     {
@@ -63,8 +63,8 @@ module.exports = {
     },
     extensions: ['.js', '.vue'],
     modules: [
-      "node_modules",
-      path.resolve(__dirname, "src/components"),
+      'node_modules',
+      path.resolve(__dirname, 'src/components')
     ]
   },
   devServer: {

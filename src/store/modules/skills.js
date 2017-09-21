@@ -4,7 +4,7 @@ const skills = {
     data: []
   },
   getters: {
-    skills: ({data}) => (data)
+    skills: ({ data }) => (data)
   },
   mutations: {
     addNewSkill(state, skill) {
@@ -21,9 +21,9 @@ const skills = {
         state.data = response.body
       }, response => {
         console.error(response)
-      });
+      })
     }
   }
 }
 
-export default skills;
+export default skills

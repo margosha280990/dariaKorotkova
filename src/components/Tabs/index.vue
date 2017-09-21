@@ -15,10 +15,10 @@
 <script>
 export default {
   data: () => ({
-    tabs : [
-      {name: 'Обо мне', route: '/'},
-      {name: 'Блог', route: '/blog'},
-      {name: 'Мои работы', route: '/works'}
+    tabs: [
+      { name: 'Обо мне', route: '/' },
+      { name: 'Блог', route: '/blog' },
+      { name: 'Мои работы', route: '/works' }
     ]
   })
 }

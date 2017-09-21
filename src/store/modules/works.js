@@ -4,10 +4,10 @@ const works = {
     data: {}
   },
   actions: {
-    addNewWork({state, rootGetters}, fields) {
-      console.log(fields);
+    addNewWork({ state, rootGetters }, fields) {
+      console.log(fields)
     }
   }
 }
 
-export default works;
+export default works

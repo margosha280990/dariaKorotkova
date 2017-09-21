@@ -15,7 +15,7 @@ export default {
       type: String,
       default: 'Html'
     },
-    id : {
+    id: {
       type: Number
     },
     percents: {

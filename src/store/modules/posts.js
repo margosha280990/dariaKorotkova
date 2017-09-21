@@ -4,7 +4,7 @@ const posts = {
     data: []
   },
   getters: {
-    posts: ({data}) => (data) 
+    posts: ({ data }) => (data)
   },
   mutations: {
     addBlogPost(state, post) {
@@ -15,4 +15,4 @@ const posts = {
   }
 }
 
-export default posts;
+export default posts

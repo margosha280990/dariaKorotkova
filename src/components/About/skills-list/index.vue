@@ -27,19 +27,18 @@
 </template>
 <script>
 
-import { mapGetters } from 'vuex'
 import { Validator } from 'simple-vue-validator'
 
 export default {
   mixins: [require('simple-vue-validator').mixin],
   validators: {
-    skillName: (value) => (
-      Validator.value(value).required('Название не может быть пустым')  
-    ) 
+    skillName: (value) => {
+      return Validator.value(value).required('Название не может быть пустым')
+    }
   },
   data: () => ({
     skillName: '',
-    toto: ""
+    toto: ''
   }),
   props: {
     skillGroup: String,
@@ -49,12 +48,11 @@ export default {
     addSkill(skillGroup) {
       this.$validate().then(success => {
         if (!success) return
-        
         this.$emit('addSkill', {
           id: Math.round(Math.random() * 1000000),
           name: this.skillName,
           percents: 0,
-          type: this.checkSkillType(skillGroup),
+          type: this.checkSkillType(skillGroup)
         })
       })
     },

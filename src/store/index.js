@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import VueResource from 'vue-resource';
+import VueResource from 'vue-resource'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 Vue.use(VueResource)
-Vue.http.options.root = '/src/components';
+Vue.http.options.root = '/src/components'
 
 import skills from './modules/skills'
 import posts from './modules/posts'
@@ -14,7 +14,7 @@ export const store = new Vuex.Store({
   getters: {
     $http: () => (VueResource)
   },
-  modules : {
+  modules: {
     skills,
     posts,
     works

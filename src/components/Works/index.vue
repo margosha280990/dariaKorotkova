@@ -42,38 +42,38 @@ export default {
       return Validator.custom(() => {
         if (Validator.isEmpty(value)) return
 
-        let allowedTypes = ['application/pdf', 'application/zip']
+        const allowedTypes = ['application/pdf', 'application/zip']
 
         if (!_.includes(allowedTypes, value.type)) {
           return 'Недопустимый формат файла, разрешены только .zip и .pdf'
         }
-      });
+      })
     }
   },
   data: () => ({
     fields: {
-      title: "",
-      tech: "",
+      title: '',
+      tech: '',
       file: null
     }
   }),
   methods: {
     ...mapActions('works', ['addNewWork']),
     getFile(event) {
-      let file = event.target.files[0]
-      this.fields.file = file;
+      const file = event.target.files[0]
+      this.fields.file = file
     },
     sendData() {
       this.$validate().then(success => {
         if (!success) return
 
-        let formData = new FormData();
+        const formData = new FormData()
 
         formData.append('file', this.fields.file)
         formData.append('tech', this.fields.tech)
         formData.append('title', this.fields.title)
 
-        this.addNewWork(formData);
+        this.addNewWork(formData)
       })
     }
   },

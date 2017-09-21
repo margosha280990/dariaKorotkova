@@ -46,7 +46,7 @@ export default {
   methods: {
     ...mapMutations('posts', ['addBlogPost']),
     addPost() {
-      let fieldsData = _.clone(this.fields)
+      const fieldsData = _.clone(this.fields)
       this.addBlogPost(fieldsData)
     }
   },
