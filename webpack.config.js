@@ -2,11 +2,14 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    entry: './src/main.js',
+    styles: './src/styles/main.js'
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [{
@@ -24,8 +27,8 @@ module.exports = {
                 loader: 'sass-resources-loader',
                 options: {
                   resources: [
-                    './src/variables.scss',
-                    './src/mixins.scss'
+                    './src/styles/common/variables.scss',
+                    './src/styles/common/mixins.scss'
                   ]
                 }
               }
@@ -37,6 +40,11 @@ module.exports = {
     {
       test: /\.js$/,
       use: ['babel-loader', 'eslint-loader'],
+      exclude: /node_modules/
+    },
+    {
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
       exclude: /node_modules/
     },
     {
@@ -69,7 +77,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    noInfo: true
+    noInfo: false
   },
   performance: {
     hints: false
