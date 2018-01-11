@@ -11,6 +11,7 @@
     <script src="/assets/scripts/bundle.js" defer></script>
   </head>
   <body>
+    <div id="page-preloader"><span class="spinner"></span></div>
     <div class="wrapper">
       <header class="header">  
         <section class="section hero">
@@ -32,30 +33,73 @@
               <h1 class="block-title-u">блог</h1>
               <div class="user__info">статьи, которые написала я</div>
             </div>
-          </div><a class="hamburger hero__menu">
-            <div class="nav"><a class="nav-item" href="/index.html">Главная</a><a class="nav-item" href="/about.html">Обо мне</a><a class="nav-item" href="/my-works.html">Портфолио</a><a class="nav-item" href="/blog.html">Блог</a><a class="nav-item" href="/login.html">Авторизация</a></div></a>
+          </div>
+          <button class="hamburger hero__menu"></button>
+          <nav class="nav">
+            <ul class="nav__list">
+              <button class="nav__close"></button>
+              <li class="nav__item"><a class="nav__link" href="/index.html">Главная</a></li>
+              <li class="nav__item"><a class="nav__link" href="/about.html">Обо мне</a></li>
+              <li class="nav__item"><a class="nav__link" href="/my-works.html">Портфолио</a></li>
+              <li class="nav__item"><a class="nav__link" href="/blog.html">Блог</a></li>
+            </ul>
+          </nav>
+          <button class="arrow-down hero__scroll-btn"></button>
+          <div class="blog__treug"></div>
         </section>
       </header>
       <section class="section blog">
         <div class="blog__main">
-          <div class="blog__treug"></div>
+          <article class="blog__article blog-article js-article" id="tab1" data-article="tab1">
+            <header class="blog-article__header">
+              <h2 class="blog-article__title">Как создать сайт</h2>
+              <time class="blog-article__datetime">26 ноября 2016</time>
+            </header>
+            <div class="blog-article__text">
+              <p>Вы решили приступить к созданию сайта?.. Прекрасно!Современный дизайн, идеальная вёрстка, совершенное программирование… Всё это просто чудесно, но, к сожалению, может оказаться недостаточным для максимальной эффективности Вашего ресурса. </p>
+              <p>В чём же секрет успеха?..</p>
+              <p>В этой статье мы не будем говорить о том, что создание сайта процесс сложный, требующий внимания, умственных затрат и коллективных усилий. Будем надеяться, что величайшая важность этапа проектирования для Вас очевидна и Вы прекрасно понимаете, что именно на первой стадии работы закладываются основы успешного функционирования веб-ресурса. И, что самое главное, от Вас на данном этапе зависит очень многое.</p>
+              <p>Готовы приступать к работе? Тогда эта статья для Вас!</p>
+            </div>
+          </article>
+          <article class="blog__article blog-article js-article" id="tab2" data-article="tab2">
+            <header class="blog-article__header">
+              <h2 class="blog-article__title">Как создать сайт</h2>
+              <time class="blog-article__datetime">26 ноября 2016</time>
+            </header>
+            <div class="blog-article__text">
+              <p>Вы решили приступить к созданию сайта?.. Прекрасно!Современный дизайн, идеальная вёрстка, совершенное программирование… Всё это просто чудесно, но, к сожалению, может оказаться недостаточным для максимальной эффективности Вашего ресурса. </p>
+              <p>В чём же секрет успеха?..</p>
+              <p>В этой статье мы не будем говорить о том, что создание сайта процесс сложный, требующий внимания, умственных затрат и коллективных усилий. Будем надеяться, что величайшая важность этапа проектирования для Вас очевидна и Вы прекрасно понимаете, что именно на первой стадии работы закладываются основы успешного функционирования веб-ресурса. И, что самое главное, от Вас на данном этапе зависит очень многое.</p>
+              <p>Готовы приступать к работе? Тогда эта статья для Вас!</p>
+            </div>
+          </article>
+          <article class="blog__article blog-article js-article" id="tab3" data-article="tab3">
+            <header class="blog-article__header">
+              <h2 class="blog-article__title">Как создать сайт</h2>
+              <time class="blog-article__datetime">26 ноября 2016</time>
+            </header>
+            <div class="blog-article__text">
+              <p>Вы решили приступить к созданию сайта?.. Прекрасно!Современный дизайн, идеальная вёрстка, совершенное программирование… Всё это просто чудесно, но, к сожалению, может оказаться недостаточным для максимальной эффективности Вашего ресурса. </p>
+              <p>В чём же секрет успеха?..</p>
+              <p>В этой статье мы не будем говорить о том, что создание сайта процесс сложный, требующий внимания, умственных затрат и коллективных усилий. Будем надеяться, что величайшая важность этапа проектирования для Вас очевидна и Вы прекрасно понимаете, что именно на первой стадии работы закладываются основы успешного функционирования веб-ресурса. И, что самое главное, от Вас на данном этапе зависит очень многое.</p>
+              <p>Готовы приступать к работе? Тогда эта статья для Вас!</p>
+            </div>
+          </article>
         </div>
-        <div class="blog__art">
-          <div class="blog__nav">
-            <ul class="blog__nav-spisok">
-              <li><a class="blog__nav-hr active" href="#tab1">Как создать сайт</a></li>
-              <li><a class="blog__nav-hr" href="#tab2">Как создать сайт</a></li>
-              <li><a class="blog__nav-hr" href="#tab3">Как создать сайт</a></li>
-            </ul>
-          </div>
-          <div class="blog__arcticle">
-            <h2>Как создать сайт</h2>
-            <p class="blog__date">26 ноября 2016</p>
-            <p>Вы решили приступить к созданию сайта?.. Прекрасно!Современный дизайн, идеальная вёрстка, совершенное программирование… Всё это просто чудесно, но, к сожалению, может оказаться недостаточным для максимальной эффективности Вашего ресурса. </p>
-            <p>В чём же секрет успеха?..</p>
-            <p>В этой статье мы не будем говорить о том, что создание сайта процесс сложный, требующий внимания, умственных затрат и коллективных усилий. Будем надеяться, что величайшая важность этапа проектирования для Вас очевидна и Вы прекрасно понимаете, что именно на первой стадии работы закладываются основы успешного функционирования веб-ресурса. И, что самое главное, от Вас на данном этапе зависит очень многое.</p>
-            <p>Готовы приступать к работе? Тогда эта статья для Вас!</p>
-          </div>
+        <div class="blog__sidebar">
+          <aside class="sidebar" id="js-sidebar-container">
+            <div class="sidebar__toggle" id="sidebar-toggle"></div>
+            <div class="sidebar__wrapper">
+              <nav class="sidebar__nav">
+                <ul class="sidebar__list" id="top-menu">
+                  <li class="active"><a class="sidebar__link js-show-article" href="#tab1">Как создать сайт</a></li>
+                  <li><a class="sidebar__link js-show-article" href="#tab2">Как создать сайт</a></li>
+                  <li><a class="sidebar__link js-show-article" href="#tab3">Как создать сайт</a></li>
+                </ul>
+              </nav>
+            </div>
+          </aside>
         </div>
       </section>
       <footer class="map__footer footer">

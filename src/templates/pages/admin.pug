@@ -1,0 +1,50 @@
+extends ../template
+
+block variables
+    - var title = "Adminka"
+
+block content
+    .admin__back
+        h1.admin Панель администрирования
+        div(id="raz" class="admin__tabs")
+            .admin__tabs-1
+                span "Обо мне"
+                h4.admin__title Страница "Обо мне"
+                form.admin__skills(action="")
+                    ul.admin__list
+                        each item in ['Frontend', 'Backend', 'Workflow']
+                            li.admin-list__item
+                                .admin-row
+                                    h4.admin-row__title #{item}
+                                        ul.admin-row__list
+                                            each skill in ['Html5', 'css3', 'JavaScript']
+                                                li.admin-row__item
+                                                    .admin__skill-title #{skill} 
+                                                        input(type="text" name="procent" class="admin__input-skill") 
+                                                        .admin__text %
+                    input(type="submit" value="Сохранить" class="admin__save")
+            .admin__tabs-2
+                span "Блог"
+                h4.admin__title Страница "Блог"
+                form.admin__blog(action="")
+                    p Добавить запись
+                    .admin__blog-fields
+                        input(type="text" name="blog_name" placeholder="Название")
+                    .admin__blog-fieldd
+                        input(type="date" name="date" placeholder="Дата")
+                    .admin__blog-fieldt
+                        textarea(name="blog_text", cols="30", rows="10")
+                    input(type="submit" value="Добавить" class="admin__save")
+            .admin__tabs-3
+                span "Портфолио"
+                h4.admin__title Страница "Портфолио"
+                form.admin__works(action="")
+                    p Добавить работу
+                    .admin__works-field
+                        input(type="text" name="works_name" placeholder="Название")
+                    .admin__works-fields
+                        input(type="text" name="works_techn" placeholder="Технологии")
+                    .admin__works-zagr
+                        input(type="file" name="works_img")
+                    input(type="submit" value="Добавить" class="admin__save")
+                                                

@@ -19,44 +19,58 @@ block content
                     .user__pic
                         .user__pic-img
                 .user__description
-                    h2.user__name Дарья Короткова
+                    h1.user__name Дарья Короткова
                     .user__info Личный сайт разработчика
-            a(class="hamburger hero__menu")
-                .nav
-                    a(class="nav-item" href="/index.html") Главная
-                    a(class="nav-item" href="/about.html") Обо мне
-                    a(class="nav-item" href="/my-works.html") Портфолио
-                    a(class="nav-item" href="/blog.html") Блог
-                    a(class="nav-item" href="/login.html") Авторизация
-            img(src="/assets/images/arrow-down.png").arrow-down.hero__scroll-btnw
+            button(class="hamburger hero__menu")
+            nav.nav
+                ul.nav__list
+                    button(class="nav__close")
+                    li.nav__item
+                        a(class="nav__link" href="/index.html") Главная
+                    li.nav__item
+                        a(class="nav__link" href="/about.html") Обо мне
+                    li.nav__item
+                        a(class="nav__link" href="/my-works.html") Портфолио
+                    li.nav__item
+                        a(class="nav__link" href="/blog.html") Блог
+            button.arrow-down.hero__scroll-btnw
     section.section.works
         .block
             .block__treug
-            h1.works-subtitle Мои работы
+            h2.works-subtitle Мои работы
     section.section.slider
         .slider__left
             .slider-description__title
-                        h2.block-subtitle Treedeo
+                        h2.block-subtitle#block-subtitle
                         .line
                             .slider__skills html, css, js, php
                         .slider__but-p
-                            a(class="slider__but" href="http://treedeo.com") Посмотреть сайт 
+                            a(class="slider__but" id="slider__but" href="") Посмотреть сайт 
         .slider__right
-            .slider__image
-                img(src="/assets/images/treedeo.png").slider__big
+            .slider__image#slides
+                li(class="slide slider__big showing" data-parameter="Treedeo" data-link="http://treedeo.com")
+                li(class="slide" data-parameter="Treedeo2" data-link="http://treedeo.ru") 
+                li(class="slide" data-parameter="matreshka" data-link="http://matreshka51.ru")
+                li(class="slide" data-parameter="шоколадная мечта" data-link="http://chocolate-dream.ru")
             .slider__controls
-                .slider__next
-                    button.next
-                        img(src="/assets/images/up.svg").next__up
-                    img(src="/assets/images/treedeo.png").slider__little
-                .slider__previus
-                    button.prev
-                        img(src="/assets/images/down.svg").prev__down
-                    img(src="/assets/images/treedeo.png").slider__little
+                .slider__next#slider__next
+                    button.controls.next#next
+                        
+                    .slider__little-n.showing
+                    .slider__little-n
+                    .slider__little-n
+                    .slider__little-n
+                .slider__previus#slider__previus
+                    button.controls.prev#previous
+                        
+                    .slider__little-p.showing
+                    .slider__little-p
+                    .slider__little-p
+                    .slider__little-p
     section.section.feedback
         .feedback__bg
             .feedback__about
-                h1.works-title  Что обо мне говорят
+                h2.works-title  Что обо мне говорят
             .feedback__review
                 .feedback__rev
                     img(src="/assets/images/quote.png").quet
@@ -79,14 +93,9 @@ block content
                         input(class="feedback__fields-email" name="email" required placeholder="Email")
                     .feedback__fields-t
                         textarea(name="text" cols="23" rows="5" placeholder="Ваше сообщение").feedback__fields-text
-                    nav.menu__login
-                        li
-                            a(href="#")
-                                input(type="submit" class="login__but" value="Очистить")
-                       
-                        li
-                            a(href="#") 
-                                input(type="submit" class="login__but" value="Отправить")
+                    .menu__login
+                        input(type="submit" class="login__but-r" value="Очистить")
+                        input(type="submit" class="login__but" value="Отправить")
             .feedback__pole
     footer.map__footer.footer
       

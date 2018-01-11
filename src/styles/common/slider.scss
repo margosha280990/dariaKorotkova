@@ -5,14 +5,60 @@
     margin: 0px;
     list-style-type: none;
 }
-.slide{
+#slider__next{
+    position: relative;
+    height: 250px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+#slider__previus{
+    position: relative;
+    height: 250px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+.slider__little-p{
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
     z-index: 1;
+    background-size: cover;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.slider__little-n{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    background-size: cover;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.slide{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
     transition: opacity 1s;
 }
 .showing{
@@ -30,11 +76,47 @@
     color: #fff;
     background-size: cover;
 }
+.slider__little-n{width: 100%;
+    height: 250px;
+    }
+.slider__little-p{width: 100%;
+        height: 250px;
+        
+    }
+.slider__little-n:nth-of-type(1){
+    background-image: url('/assets/images/treedeo-about.png');
+}
+.slider__little-n:nth-of-type(2){
+    background-image: url('/assets/images/treedeo.png');
+}
+.slider__little-n:nth-of-type(3){
+    background-image: url('/assets/images/matreshka.jpg');
+}
+.slider__little-n:nth-of-type(4){
+    background-image: url('/assets/images/choco-dream.jpg');
+}
+
+
+.slider__little-p:nth-of-type(4){
+    background-image: url('/assets/images/treedeo-about.png');
+}
+.slider__little-p:nth-of-type(3){
+    background-image: url('/assets/images/treedeo.png');
+}
+.slider__little-p:nth-of-type(2){
+    background-image: url('/assets/images/matreshka.jpg');
+}
+.slider__little-p:nth-of-type(1){
+    background-image: url('/assets/images/choco-dream.jpg');
+}
+
+
+
 .slide:nth-of-type(1){
     background-image: url('/assets/images/treedeo-about.png');
 }
 .slide:nth-of-type(2){
-    background-image: url('/assets/images/treedeo-main.png');
+    background-image: url('/assets/images/treedeo.png');
 }
 .slide:nth-of-type(3){
     background-image: url('/assets/images/matreshka.jpg');
@@ -57,8 +139,8 @@
 
 .controls:hover,
 .controls:focus{
-    background: #eee;
-    color: #333;
+   /* background: #eee;
+    color: #333;*/
 }
 
 .container{
@@ -72,3 +154,5 @@
     z-index: 10;
     font-size: 0px;
 }
+.slider__previus{width:100%;height: 250px;}
+.slider__next{width:100%;height: 250px;}

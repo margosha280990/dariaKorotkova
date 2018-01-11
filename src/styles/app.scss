@@ -35,6 +35,23 @@ body{
 }
 
 
+#page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url("/assets/images/desert_prel_bg.jpg") no-repeat center;
+    z-index: 100500;
+}
+
+#page-preloader .spinner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("/assets/images/desert_preloader.gif" ) no-repeat center;   
+}
+
 @import 'common/menu';
 @import 'common/main';
 @import 'common/technologies';
@@ -43,3 +60,4 @@ body{
 @import 'common/login';
 @import 'common/works';
 @import 'common/blog';
+@import 'common/admin';

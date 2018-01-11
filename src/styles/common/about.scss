@@ -17,8 +17,8 @@ display: flex;}
 .user__pic-img{
     background-image: url(/assets/images/ya2.jpg);
     background-size: cover;
-    width:200px;
-    height:200px;
+    width:150px;
+    height:150px;
     border-radius: 200px;
 }
 .hero__title{
@@ -40,6 +40,11 @@ margin-left: 3%;}
     top: 19%;
     left: 49%;
     text-align: center;
+    background: url("/assets/images/arrow-down.png") no-repeat;
+    border: medium none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
 }
 section.section.about{display:flex;}
 .about__left{background-color: #eeeee9;width:50%;}
@@ -222,38 +227,55 @@ margin-top: 10px;line-height: 1.5;width:92%;}
 }
 @media all and (max-width: 780px)
 {
+    .hero__socials{margin-top:10px;}
     .triangle.tringle_fill_white.about__left-triangle{
-        border-right: 243px solid transparent;
-        top: 500px;
-        z-index:40;
+        border-right: 190px solid transparent;
+        top: 14.15%;
+        z-index: 40;
     }
     .triangle.tringle_fill_beige.about__right-triangle{
-        border-left: 320px solid transparent;
-        top: 500px;
+        border-left: 190px solid transparent;
+        top: 14.15%;
+        left: 47.3%;
+        z-index: 40;
     }
-    .arrow-down.hero__scroll-btn{left:43%;top:15%;}
+    .arrow-down.hero__scroll-btn{left:46%;top:15%;
+        
+    }
     .about__left {
         display: table;
         flex-wrap: wrap-reverse;
         width: 100%;
     }
     .user-description__avatar {
-        width: 300px;
+        width: 271px;
         height: 271px;
-        margin-left: 10px;
+        margin-left: 24px;
     }
     section.section.about{flex-wrap: wrap;}
     .about__left-title{display: block;
     width:100%;}
     .user-description__title{width:300px;}
     .user-description__text.text-content{width:300px;}
-    .about__right{width:320px;}
+    .about__right{width:100%;}
     .skills-row__item{}
     .skill{width:100px;height: 100px;}
     .skills-row__list{margin-left: -81px !important;}
     .about__left-flex{width:320px;}
     .map__contacts{position:inherit; padding: 0px; background-color: #fff;}
     .contacts__list{margin-left:0px}
+    .block-subtitle{
+        padding: 15px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
 
 
+}
+@media all and (max-width: 320px){
+    .block-subtitle{padding: 4px;
+        font-size: 14px;
+        margin-top: 30px;}
+    .triangle.tringle_fill_beige.about__right-triangle{left: 40.5%;}
+   
 }

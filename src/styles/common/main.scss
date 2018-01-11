@@ -52,8 +52,7 @@
     text-decoration: none; 
 }
 
-.socials{list-style: none;
-    padding: 15px;}
+.socials{list-style: none;}
 .socials li{display:inline-block;padding: 10px;}
 .licence__foot{text-align: center;padding: 40px;margin-top:100px;}
 .licence__foot-fp {
@@ -77,3 +76,50 @@
       transform: translateX(-3056px);
     } 
   }
+/*flip*/
+/* весь контейнер поддерживает перспективу */
+.flip-container {
+    perspective: 1000;
+   }
+    /* переверните сторону при проведении мышью */
+   /* .flip-container:hover .flipper, .flip-container.hover .flipper {
+     transform: rotateY(180deg);
+    }*/
+   
+   .flip-container, .section.user, .section.login {
+    width: 320px;
+    height: 362px;
+   }
+   
+   /* здесь находится скорость перевертывания */
+   .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+   
+    position: relative;
+   }
+   
+   /* скройте обратную сторону во время переворота */
+   section.section.user, section.section.login {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+   }
+   
+   /* лицевая сторона размещена над обратной */
+   .section.user {
+    z-index: 2;
+   }
+   
+   /* обратная, изначально скрытая сторона */
+   .section.login {
+    transform: rotateY(180deg);
+    z-index: 10;
+   
+   }
+
+   .flip-container.hover .flipper, .flip-container.flip .flipper {
+    transform: rotateY(180deg);
+   }
+   .disp{display:none;}

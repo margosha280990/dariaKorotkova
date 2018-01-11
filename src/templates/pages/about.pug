@@ -22,14 +22,19 @@ block content
                 .user__description
                     h2.user__name Дарья Короткова
                     .user__info Личный сайт разработчика
-            a(class="hamburger hero__menu")
-                .nav
-                    a(class="nav-item" href="/index.html") Главная
-                    a(class="nav-item" href="/about.html") Обо мне
-                    a(class="nav-item" href="/my-works.html") Портфолио
-                    a(class="nav-item" href="/blog.html") Блог
-                    a(class="nav-item" href="/login.html") Авторизация
-            img(src="/assets/images/arrow-down.png").arrow-down.hero__scroll-btn
+            button(class="hamburger hero__menu")
+            nav.nav
+                ul.nav__list
+                    button(class="nav__close")
+                    li.nav__item
+                        a(class="nav__link" href="/index.html") Главная
+                    li.nav__item
+                        a(class="nav__link" href="/about.html") Обо мне
+                    li.nav__item
+                        a(class="nav__link" href="/my-works.html") Портфолио
+                    li.nav__item
+                        a(class="nav__link" href="/blog.html") Блог
+            button.arrow-down.hero__scroll-btn
     section.section.about
         .about__left
             .triangle.tringle_fill_white.about__left-triangle
