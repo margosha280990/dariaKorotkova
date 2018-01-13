@@ -11,63 +11,82 @@
     <script src="/assets/scripts/bundle.js" defer></script>
   </head>
   <body>
+    <div id="page-preloader"><span class="spinner"></span></div>
     <div class="wrapper">
       <header class="header">  
         <section class="section hero">
-          <div class="hero__socials">
-            <ul class="socials">
-              <li class="socials__item"><a class="socials__item socials__item_vk" href=""><img src="/assets/images/vk.svg"></a></li>
-              <li class="socials__item"><a class="socials__item socials__item_github" href=""><img src="/assets/images/github.svg"></a></li>
-              <li class="socials__item"><a class="socials__item socials__item_in" href=""><img src="/assets/images/in.svg"></a></li>
-            </ul>
+          <div class="hero__socials"><a class="socials__item socials__item_vk" href=""><img src="/assets/images/vk.svg"></a><a class="socials__item socials__item_github" href=""><img src="/assets/images/github.svg"></a><a class="socials__item socials__item_in" href=""><img src="/assets/images/in.svg"></a>
           </div>
           <div class="hero__title">
-            <div class="section-title"><img class="section-title__pic" src="" alt=""></div>
             <div class="user hero__user">
               <div class="user__pic">
                 <div class="user__pic-img"></div>
               </div>
             </div>
             <div class="user__description">
-              <h2 class="user__name">Дарья Короткова</h2>
+              <h1 class="user__name">Дарья Короткова</h1>
               <div class="user__info">Личный сайт разработчика</div>
             </div>
-          </div><a class="hamburger hero__menu">
-            <div class="nav"><a class="nav-item" href="/index.html">Главная</a><a class="nav-item" href="/about.html">Обо мне</a><a class="nav-item" href="/my-works.html">Портфолио</a><a class="nav-item" href="/blog.html">Блог</a><a class="nav-item" href="/login.html">Авторизация</a></div></a><img class="arrow-down hero__scroll-btnw" src="/assets/images/arrow-down.png">
+          </div>
+          <button class="hamburger hero__menu"></button>
+          <nav class="nav">
+            <ul class="nav__list">
+              <button class="nav__close"></button>
+              <li class="nav__item"><a class="nav__link" href="/index.html">Главная</a></li>
+              <li class="nav__item"><a class="nav__link" href="/about.html">Обо мне</a></li>
+              <li class="nav__item"><a class="nav__link" href="/my-works.html">Портфолио</a></li>
+              <li class="nav__item"><a class="nav__link" href="/blog.html">Блог</a></li>
+            </ul>
+          </nav>
+          <button class="arrow-down hero__scroll-btn"></button>
         </section>
+        <div class="blog__treug"></div>
       </header>
+      <button class="arrow-down hero__scroll-btnw"></button>
       <section class="section works">
         <div class="block">
-          <div class="block__treug"></div>
-          <h1 class="works-subtitle">Мои работы</h1>
+          <h2 class="works-subtitle">Мои работы</h2>
         </div>
       </section>
       <section class="section slider">
         <div class="slider__left">
           <div class="slider-description__title">
-            <h2 class="block-subtitle">Treedeo</h2>
+            <h2 class="block-subtitle" id="block-subtitle"></h2>
             <div class="line">
               <div class="slider__skills">html, css, js, php</div>
             </div>
-            <div class="slider__but-p"><a class="slider__but" href="http://treedeo.com">Посмотреть сайт </a></div>
+            <div class="slider__but-p"><a class="slider__but" id="slider__but" href="">Посмотреть сайт </a></div>
           </div>
         </div>
         <div class="slider__right">
-          <div class="slider__image"><img class="slider__big" src="/assets/images/treedeo.png"></div>
+          <div class="slider__image" id="slides">
+            <li class="slide slider__big showing" data-parameter="Treedeo" data-link="http://treedeo.com"></li>
+            <li class="slide" data-parameter="Treedeo2" data-link="http://treedeo.ru"> </li>
+            <li class="slide" data-parameter="matreshka" data-link="http://matreshka51.ru"></li>
+            <li class="slide" data-parameter="шоколадная мечта" data-link="http://chocolate-dream.ru"></li>
+          </div>
           <div class="slider__controls">
-            <div class="slider__next">
-              <button class="next"><img class="next__up" src="/assets/images/up.svg"></button><img class="slider__little" src="/assets/images/treedeo.png">
+            <div class="slider__next" id="slider__next">
+              <button class="controls next" id="next"></button>
+              <div class="slider__little-n showing"></div>
+              <div class="slider__little-n"></div>
+              <div class="slider__little-n"></div>
+              <div class="slider__little-n"></div>
             </div>
-            <div class="slider__previus">
-              <button class="prev"><img class="prev__down" src="/assets/images/down.svg"></button><img class="slider__little" src="/assets/images/treedeo.png">
+            <div class="slider__previus" id="slider__previus">
+              <button class="controls prev" id="previous"></button>
+              <div class="slider__little-p showing"></div>
+              <div class="slider__little-p"></div>
+              <div class="slider__little-p"></div>
+              <div class="slider__little-p"></div>
             </div>
           </div>
         </div>
       </section>
       <section class="section feedback">
         <div class="feedback__bg">
-          <div class="feedback__about">
-            <h1 class="works-title"> Что обо мне говорят</h1>
+          <div class="feedback__about"><img class="title__img" src="/assets/images/ellipse-4.png" alt="before">
+            <h2 class="works-title"> Что обо мне говорят</h2><img class="title__img" src="/assets/images/ellipse-4-1.png" alt="after">
           </div>
           <div class="feedback__review">
             <div class="feedback__rev"><img class="quet" src="/assets/images/quote.png">
@@ -84,7 +103,9 @@
             </div>
           </div>
           <div class="feedback__sms">
-            <h3 class="works-title"> Связаться со мной</h3>
+            <div class="feedback__title"><img class="title__img" src="/assets/images/ellipse-4.png" alt="before">
+              <h3 class="feedback__title-title"> Связаться со мной</h3><img class="title__img" src="/assets/images/ellipse-4-1.png" alt="before">
+            </div>
             <form class="feedback__fields">
               <div class="feedback__fields-n">
                 <input class="feedback__fields-name" name="name" required placeholder="Имя">
@@ -95,12 +116,10 @@
               <div class="feedback__fields-t">
                 <textarea class="feedback__fields-text" name="text" cols="23" rows="5" placeholder="Ваше сообщение"></textarea>
               </div>
-              <nav class="menu__login">
-                <li><a href="#">
-                    <input class="login__but" type="submit" value="Очистить"></a></li>
-                <li><a href="#"> 
-                    <input class="login__but" type="submit" value="Отправить"></a></li>
-              </nav>
+              <div class="menu__login">
+                <input class="login__but-r" type="submit" value="Очистить">
+                <input class="login__but" type="submit" value="Отправить">
+              </div>
             </form>
           </div>
           <div class="feedback__pole"></div>
@@ -108,13 +127,11 @@
       </section>
       <footer class="map__footer footer">
         <div class="footer__row">
-          <div class="container">
+          <div class="container-f">
             <div class="footer__col footer__col-left">
               <div class="footer__text">
                 <p class="footer__text_bold">Я веб-разработчик из Санкт-Петербурга, и этот сайт я сделалa в рамках обучения в Школе онлайн образования LoftSchool.</p>
               </div>
-            </div>
-            <div class="footer__col footer__col-right">
               <div class="footer__text footer__text_margin_top">
                 <p>Короткова Дарья Дмитриевна</p>
               </div>
@@ -122,27 +139,24 @@
           </div>
         </div>
         <div class="footer__row">
-          <div class="container">
+          <div class="container-f">
             <div class="footer__col footer__col-left">
               <nav class="menu__footer"><a href="/about.html">Обо мне</a><a href="/my-works.html">Портфолио</a><a href="/blog.html">Блог</a><a href="/login.html">Авторизация</a></nav>
             </div>
             <div class="footer__col footer__col-right">
-              <ul class="socials socials_rounded">
-                <li class="socials__item"><a class="socials__item socials__item_vk" href=""><img src="/assets/images/vk.svg"></a></li>
-                <li class="socials__item"><a class="socials__item socials__item_github" href=""><img src="/assets/images/github.svg"></a></li>
-                <li class="socials__item"><a class="socials__item socials__item_in" href=""><img src="/assets/images/in.svg"></a></li>
-              </ul>
+              <div class="socials socials_rounded"><a class="socials__item socials__item_vk" href=""><img src="/assets/images/vk.svg"></a><a class="socials__item socials__item_github" href=""><img src="/assets/images/github.svg"></a><a class="socials__item socials__item_in" href=""><img src="/assets/images/in.svg"></a>
+              </div>
             </div>
           </div>
         </div>
         <div class="footer__row">
-          <div class="container">
+          <div class="container-r">
             <div class="footer__col footer__col-left">
               <div class="footer__text_end">
                 <p>margosha280990</p>
                 <p>ddm_90@mail.ru</p>
                 <p>+79111434286</p>
-                <p>Санкт-Петербург</p>
+                <p>Санкт-Петербург        </p>
               </div>
             </div>
           </div>

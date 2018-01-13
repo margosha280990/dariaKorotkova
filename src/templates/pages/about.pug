@@ -5,34 +5,10 @@ block variables
 
 block content
    
-    header.header   
-        section.section.hero
-            .hero__socials
-                ul.socials
-                    each item in ['vk', 'github', 'in']
-                        li.socials__item
-                            a(href="" class=`socials__item socials__item_${item}`)
-                                img(src=`/assets/images/${item}.svg`)
-            .hero__title
-                .section-title
-                    img(src="", alt="").section-title__pic
-                .user.hero__user
-                    .user__pic
-                        .user__pic-img
-                .user__description
-                    h2.user__name Дарья Короткова
-                    .user__info Личный сайт разработчика
-            a(class="hamburger hero__menu")
-                .nav
-                    a(class="nav-item" href="/index.html") Главная
-                    a(class="nav-item" href="/about.html") Обо мне
-                    a(class="nav-item" href="/my-works.html") Портфолио
-                    a(class="nav-item" href="/blog.html") Блог
-                    a(class="nav-item" href="/login.html") Авторизация
-            img(src="/assets/images/arrow-down.png").arrow-down.hero__scroll-btn
+    include header.pug
     section.section.about
         .about__left
-            .triangle.tringle_fill_white.about__left-triangle
+            
             .about__left-flex
                 .about__left-title
                     h1.block-title Обо мне
@@ -46,7 +22,7 @@ block content
                         p Я начальник веб отдела компании ООО "РосГид" из Санкт-Петербурга. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и работающие проекты.
                         p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.
         .about__right
-            .triangle.tringle_fill_beige.about__right-triangle
+            
             .about__right-title
                 h3.block-subtitle Чем я могу быть вам полезна
             .about__right-text.text-content
@@ -90,15 +66,15 @@ block content
     footer.map__footer.footer
       
       .footer__row
-        .container
+        .container-f
           .footer__col.footer__col-left
             .footer__text
               p.footer__text_bold Я веб-разработчик из Санкт-Петербурга, и этот сайт я сделалa в рамках обучения в Школе онлайн образования LoftSchool.
-          .footer__col.footer__col-right
+          
             .footer__text.footer__text_margin_top
                 p Короткова Дарья Дмитриевна
       .footer__row
-        .container
+        .container-f
           .footer__col.footer__col-left
             nav.menu__footer
                 a(href="/about.html") Обо мне
@@ -107,18 +83,19 @@ block content
                 a(href="/login.html") Авторизация
           .footer__col.footer__col-right
             
-            ul.socials.socials_rounded
+            .socials.socials_rounded
                 each item in ['vk', 'github', 'in']
-                  li.socials__item
                     a(href="" class=`socials__item socials__item_${item}`)
                         img(src=`/assets/images/${item}.svg`)
       .footer__row
-        .container
+        .container-r
           .footer__col.footer__col-left
             .footer__text_end
               p margosha280990
               p ddm_90@mail.ru
               p +79111434286
-              p Санкт-Петербург
+              p Санкт-Петербург        
+            
+
           
       

@@ -1,43 +1,27 @@
-extends ../template
-
-block variables
-    - var title = "Добро пожаловать О великий администратор и гуру!"
-
-block content
-        .welcome
-        header.header__login
-        section.section.login
-            .login__desert
-                h1.login__title Авторизуйтесь
-                form(class='login')
-                    .login__fields
-                        .login__fields-e
-                            img(src="/assets/images/login.svg").login__icon-e
-                            input(class="login__email"  data-constraints="@Required" required name="email" id="email" placeholder="Логин")
-                        .login__fields-p
-                            img(src="/assets/images/password.svg").login__icon-p
-                            input(class="login__pass" type="password"  data-constraints="@Required" required name="password" id="password" placeholder="Пароль")
-                    .login__checkbox
-                        input(type='checkbox' name='agreement' checked)
-                        label(for="agreement") Я человек
-                    p.login__p Вы точно не робот?
-                    .login__questions
+section.section.login
+    .login__desert
+        h1.login__title Авторизуйтесь
+        form(class='login')
+            .login__fields
+                .login__fields-e
+                    img(src="/assets/images/login.svg").login__icon-e
+                    input(class="login__email"  data-constraints="@Required" required name="email" id="email" placeholder="Логин")
+                .login__fields-p
+                    img(src="/assets/images/password.svg").login__icon-p
+                    input(class="login__pass" type="password"  data-constraints="@Required" required name="password" id="password" placeholder="Пароль")
+                .login__checkbox
+                    input(type='checkbox' name='agreement' checked)
+                    label(for="agreement") Я человек
+                p.login__p Вы точно не робот?
+                .login__questions
                         
-                        input(type='radio' name='yes' checked)
-                        label(for="yes") Да
+                    input(type='radio' name='yes' checked)
+                    label(for="yes") Да
                         
-                        input(type='radio' name='no')
-                        label(for="no") Нет
-                    nav.menu__login
-                        li
-                            a(href="/index.html") На главную
-                       
-                        li
-                            a(href="#") 
-                                input(type="submit" class="login__but" value="Вход")
+                    input(type='radio' name='no')
+                    label(for="no") Нет
+                .menu__login
+                    a(class="menu__login-link" href="/index.html") На главную
+                    input(type="submit" class="login__but" value="Вход")
                             
-        footer.licence
-            div(class="licence__foot")
-                p(class="licence__foot-fp") Короткова Дарья |
-                p(class="licence__foot-fp") Создано в loftschool |
-                p(class="licence__foot-fp") 2017
+     

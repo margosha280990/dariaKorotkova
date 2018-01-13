@@ -11,26 +11,58 @@
     <script src="/assets/scripts/bundle.js" defer></script>
   </head>
   <body>
+    <div id="page-preloader"><span class="spinner"></span></div>
     <div class="wrapper">
       <div class="welcome"></div>
-      <section class="section buttonit"><a class="buttonit__button" href="/login.html">Авторизоваться</a></section>
-      <section class="section user">
-        <div class="user__desert">
-          <p class="user__main_img"></p>
-          <h1>Короткова Дарья</h1>
-          <p class="user__text">Личный сайт full-stack программиста</p>
-          <ul class="socials">
-            <li><a class="socials__vk" href="https://vk.com/id610196"><img src="/assets/images/vk.svg"></a></li>
-            <li><a class="socials__git" href=""><img src="/assets/images/github.svg"></a></li>
-            <li><a class="socials__face" href=""><img src="/assets/images/in.svg"></a></li>
-          </ul>
-          <nav class="menu">   
-            <li><a href="/about.html">Обо мне </a></li>
-            <li><a href="/my-works.html">Портфолио </a></li>
-            <li><a href="/blog.html">Блог</a></li>
-          </nav>
+      <section class="section buttonit"><a class="buttonit__button" href="#">Авторизоваться</a></section>
+      <div class="flip-container" id="flip-toggle">
+        <div class="flipper">
+          <section class="section user">
+            <div class="user__desert">
+              <p class="user__main_img"></p>
+              <h1>Короткова Дарья</h1>
+              <p class="user__text">Личный сайт full-stack программиста</p>
+              <div class="socials"><a class="socials__vk" href="https://vk.com/id610196"><img src="/assets/images/vk.svg"></a><a class="socials__git" href=""><img src="/assets/images/github.svg"></a><a class="socials__face" href=""><img src="/assets/images/in.svg"></a></div>
+              <div class="menu">   
+                <ul class="menu__list">
+                  <li class="menu__list-pos"><a class="menu__list-but" href="/about.html">Обо мне </a></li>
+                  <li class="menu__list-pos"><a class="menu__list-but" href="/my-works.html">Портфолио </a></li>
+                  <li class="menu__list-pos"><a class="menu__list-butl" href="/blog.html">Блог</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="section login">
+            <div class="login__desert">
+              <h1 class="login__title">Авторизуйтесь</h1>
+              <form class="login">
+                <div class="login__fields">
+                  <div class="login__fields-e"><img class="login__icon-e" src="/assets/images/login.svg">
+                    <input class="login__email" data-constraints="@Required" required name="email" id="email" placeholder="Логин">
+                  </div>
+                  <div class="login__fields-p"><img class="login__icon-p" src="/assets/images/password.svg">
+                    <input class="login__pass" type="password" data-constraints="@Required" required name="password" id="password" placeholder="Пароль">
+                  </div>
+                  <div class="login__checkbox">
+                    <input type="checkbox" name="agreement" checked>
+                    <label for="agreement">Я человек</label>
+                  </div>
+                  <p class="login__p">Вы точно не робот?</p>
+                  <div class="login__questions">
+                    <input type="radio" name="yes" checked>
+                    <label for="yes">Да</label>
+                    <input type="radio" name="no">
+                    <label for="no">Нет</label>
+                  </div>
+                  <div class="menu__login"><a class="menu__login-link" href="/index.html">На главную</a>
+                    <input class="login__but" type="submit" value="Вход">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
       <footer class="licence">
         <div class="licence__foot">
           <p class="licence__foot-fp">Короткова Дарья |</p>
