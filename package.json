@@ -2,7 +2,7 @@
   "name": "portfolio-admin-vue",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "Vladimir Sabantsev <vladimir.sabantsev@gmail.com>",
+  "author": "Daria Korotkova <ddm_90@mail.ru>",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",

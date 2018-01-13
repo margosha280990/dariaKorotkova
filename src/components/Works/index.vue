@@ -1,8 +1,8 @@
 <template lang="pug">
   .about
-    h2.title Страница "Мои работ"
+    h2.title Страница "Портфолио"
     .form
-      h3.form-title Добавить работа
+      h3.form-title Добавить работу
       .row
         app-input(
           placeholder="Название проекта"
@@ -42,10 +42,10 @@ export default {
       return Validator.custom(() => {
         if (Validator.isEmpty(value)) return
 
-        const allowedTypes = ['application/pdf', 'application/zip']
+        const allowedTypes = ['application/jpg', 'application/png']
 
         if (!_.includes(allowedTypes, value.type)) {
-          return 'Недопустимый формат файла, разрешены только .zip и .pdf'
+          return 'Недопустимый формат файла, разрешены только .png и .jpg'
         }
       })
     }
