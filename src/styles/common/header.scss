@@ -49,9 +49,9 @@ section.section.hero{
 .blog__treug{
     background: url("/assets/images/bg.svg") no-repeat center top;
     width: 100%;
-    height: 11%;
-    margin-top: 16.6%;
-    position: absolute;
+    height: 100%;
+    margin-top: -4%;
+    
 }
 @media all and (max-width: 320px)
     {
@@ -59,25 +59,17 @@ section.section.hero{
         .hero__title {
             margin-left: 0%;
         }
-        .blog__treug{margin-top: 94%;height: 7%;}
+     
         
 }
 
 
 @media all and (max-width: 360px){
-    .blog__treug{margin-top: 84%;height: 7%;}
+    
     .block{margin-top:-10px;}
     
 }
-@media all and (min-width: 361px) and (max-width: 480px){
-    .blog__treug{margin-top: 81%;height: 7%;}
-}
-@media all and (min-width: 481px) and (max-width: 650px){
-    .blog__treug{margin-top: 74%;height: 7%;}
-}
-@media all and (min-width: 651px) and (max-width: 768px){
-    .blog__treug{margin-top: 40%;height: 7%;}
-}
+
 @media all and (max-width: 780px)
 {
     .arrow-down.hero__scroll-btn{top:14%;left: 46%;}
