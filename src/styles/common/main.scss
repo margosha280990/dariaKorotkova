@@ -52,9 +52,11 @@
     text-decoration: none; 
 }
 
-.socials{list-style: none;}
+.socials{list-style: none;padding: 10px;}
+.socials__git{margin-left:10px;}
+.socials__face{margin-left:10px;}
 .socials li{display:inline-block;padding: 10px;}
-.licence__foot{text-align: center;padding: 40px;margin-top:100px;}
+.licence__foot{text-align: center;/*padding: 40px;*/margin-top:100px;}
 .licence__foot-fp {
     color: #fff;
     font-size: 12px;

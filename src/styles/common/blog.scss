@@ -9,13 +9,7 @@
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: center;}
-.blog__treug{
-    background: url("/assets/images/bg.svg") no-repeat center top;
-    width: 100%;
-    height: 11%;
-    margin-top: 17%;
-    position: absolute;
-    }
+
 .section.blog{color:#696969;background-color: #FBF8F1;}
 .blog__art{display:flex; text-align: center;}
 .blog__nav-spisok{list-style: none; padding: 30px;}
@@ -35,20 +29,7 @@
 
 @media all and (max-width: 780px)
 {
-    .socials{
-        display: flex;
-
-    }
-    .socials__item{padding: 0px;}
-    .hero__title {
-        margin-top: 73px;
-        width: 100%;
-        margin-left: -23%;
-    }
-    .header{height: 500px;}
-    .blog__treug{margin-top: 87%;
-        height: 7%;}
-    .blog__nav{display: none;}
+    
     .footer__row {
         display: flex;
         width: 100%;
@@ -56,9 +37,7 @@
     .menu__footer{padding: 0px;}
     .map__footer.footer{font-size: 13px;}
     .container{margin-top:10px;text-align: center;}
-    .footer__text.footer__text_margin_top{
-        border-bottom: 1px solid #fff;
-    }
+   
 }
 @media all and (max-width: 320px)
 {

@@ -23,9 +23,8 @@
 /*меню гамбургер*/
 /*.nav{display: none;}*/
 /*menu footer page about*/
-.menu__footer{padding: 10px;
-    text-align: center; }
- .menu__footer a{color:#fff; text-decoration: none;padding: 10px;}
+
+ .menu__footer a{color:#fff; text-decoration: none;margin-left: 10px;}
  .menu__footer a:hover{color:#cd8920;}
 
  /*menu page login*/
@@ -147,6 +146,7 @@ border-right:1px #fff solid;}
     width: 50px;
     margin-left: 146%;
     margin-top: 10px;
+    background-size:cover;
 }
 @media all and (max-width: 780px)
 {

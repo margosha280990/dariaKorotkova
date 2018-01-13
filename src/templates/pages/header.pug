@@ -1,0 +1,27 @@
+header.header   
+        section.section.hero
+            .hero__socials
+                each item in ['vk', 'github', 'in']
+                    a(href="" class=`socials__item socials__item_${item}`)
+                        img(src=`/assets/images/${item}.svg`)
+            .hero__title
+                .user.hero__user
+                    .user__pic
+                        .user__pic-img
+                .user__description
+                    h1.user__name Дарья Короткова
+                    .user__info Личный сайт разработчика
+            button(class="hamburger hero__menu")
+            nav.nav
+                ul.nav__list
+                    button(class="nav__close")
+                    li.nav__item
+                        a(class="nav__link" href="/index.html") Главная
+                    li.nav__item
+                        a(class="nav__link" href="/about.html") Обо мне
+                    li.nav__item
+                        a(class="nav__link" href="/my-works.html") Портфолио
+                    li.nav__item
+                        a(class="nav__link" href="/blog.html") Блог
+            button.arrow-down.hero__scroll-btn
+            .blog__treug
